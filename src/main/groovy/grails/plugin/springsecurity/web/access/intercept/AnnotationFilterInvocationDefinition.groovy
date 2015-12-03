@@ -81,7 +81,7 @@ class AnnotationFilterInvocationDefinition extends AbstractFilterInvocationDefin
 
 		GrailsWebRequest existingRequest
 		try {
-			existingRequest = WebUtils.retrieveGrailsWebRequest()
+			existingRequest = GrailsWebRequest.lookup()
 		}
 		catch (IllegalStateException e) {
 			throw new IllegalStateException(
